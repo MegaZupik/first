@@ -1,0 +1,11 @@
+
+header img {
+    margin: auto;
+    height: 150px;
+    display: block;
+}
+
+header {
+    grid-area: h;
+    height: 150px;
+}

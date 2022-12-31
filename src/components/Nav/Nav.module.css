@@ -1,0 +1,42 @@
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+}
+
+li:hover{
+    background-color: yellowgreen;
+}
+
+li{
+    width: 100%;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+}
+
+.item {
+    padding-bottom: 3px;
+    padding-left: 0px;
+}
+
+.nav {
+    display: block;
+}
+
+.item a{
+    text-decoration: none;
+    color: #282c34;
+}
+
+.active {
+    color: gold !important;
+}
+
+.nav {
+    background-color: forestgreen;
+}
