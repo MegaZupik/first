@@ -2,7 +2,6 @@ const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const UPDATE_NEW_MESSAGE_BODY='UPDATE-NEW-MESSAGE-BODY';
 const SEND_MESSAGE ='SEND-MESSAGE';
-const SEND_MESSAGE123 ='SEND-MESSAGE';
 /*export let addTestPost=()=>{
     store._state.ProfilePage.PostsData.push({id: '1', message: "Ubi est talis ausus?", likesCount: "15"});
     store._callSubscribers(store._state);

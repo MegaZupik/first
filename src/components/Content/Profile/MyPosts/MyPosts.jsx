@@ -39,7 +39,7 @@ const MyPosts =(props)=>{
                 <div>
                     <button onClick={addpost}>Add post</button>
                 </div>
-                <div className={s.posts}>
+                <div className={s.posts123}>
                     { postsElements }
                 </div>
             </div>
