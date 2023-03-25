@@ -1,25 +1,15 @@
 import React from "react";
 import s from "./Header.module.css";
+import {NavLink} from "react-router-dom";
+
 
 const Header =(props)=> {
-    return <header className={s.header}>
+    return (<header className={s.header} onClick={()=>(console.log(props))}>
+        <div className={s.loginBlock}>
+            {props.isAuth ? props.login : <NavLink to={"/login"}>Login</NavLink>}
+        </div>
         <img src='./img/logo.png' alt="123" />
-        {/*<div className='qwe' onClick={neDrug}>{props.message}</div>*/}
-
-    </header>
+    </header>)
 }
-// let i=0;
-//
-// function drug() {
-//     let qwe = document.querySelector('.qwe');
-//     console.log(qwe.textContent);
-//     let timerId = setInterval(() => qwe.textContent = i++, 1000);
-//     qwe.addEventListener("click", ()=> {
-//
-//     setTimeout(() => { clearInterval(timerId); console.log('stop'); }, 1000);});
-// }
-//
-// function neDrug() {
-//
-// }
+
 export default Header;

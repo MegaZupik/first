@@ -57,8 +57,8 @@
 .wrapper {
   display: grid;
   grid-template-areas:
-  "h h h"
-  "n c a";
+    "h h h"
+    "n c a";
   grid-template-rows: 180px 1fr;
   grid-template-columns: 2fr 7fr 20%;
   grid-gap: 5px;

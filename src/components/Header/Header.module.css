@@ -3,9 +3,16 @@ header img {
     margin: auto;
     height: 150px;
     display: block;
+    border: 5px solid black;
+    border-radius: 15%;
+
 }
 
 header {
     grid-area: h;
     height: 150px;
+}
+
+.loginBlock{
+    float:right;
 }

@@ -10,7 +10,7 @@ import {Provider} from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-let rerenderEntireTree= ()=>{
+
 
     root.render(
 
@@ -24,12 +24,9 @@ let rerenderEntireTree= ()=>{
             </Provider>
         </React.StrictMode>
     );
-}
 
-rerenderEntireTree();
-store.subscribe(()=>{
-    rerenderEntireTree()
-})
+
+
 let x=(y)=>{
     return (y) ? (console.log(123)):(console.log(555))
 

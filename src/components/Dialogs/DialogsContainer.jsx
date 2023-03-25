@@ -1,42 +1,28 @@
-import React from 'react';
+
 import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/dialogs-reducer";
 import Dialogs from "./Dialogs";
-import StoreContext from "../../StoreContext";
 import {connect} from "react-redux";
+import {compose} from "redux";
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
 
-const DialogsContainer = () => {
 
-
-    return <StoreContext.Consumer>
-        {store => {
-            let onSendMessageClick = () => {
-                store.dispatch(sendMessageCreator());
-            }
-            let onNewMessageChange = (body) => {
-                store.dispatch(updateNewMessageBodyCreator(body))
-            }
-            return <Dialogs updateNewMessageBody={onNewMessageChange}
-                            SendMessageClick={onSendMessageClick}
-                            DialogsPage={store.getState().DialogsPage}/>
-
-
-        }
-        }
-    </StoreContext.Consumer>
-}
 
 let mapStateToProps =(state)=>{
     return{
-DialogsPage:state.DialogsPage
+DialogsPage:state.DialogsPage,
+        dialogsPage: state.dialogsPage,
+
     }
 }
 let mapDispatchToProps =(dispatch)=>{
     return{
-        updateNewMessageBody:()=>{dispatch(updateNewMessageBodyCreator(body))},
-        SendMessageClick:(body)=>{dispatch(sendMessageCreator());}
+        updateNewMessageBody:(body)=>{dispatch(updateNewMessageBodyCreator(body))},
+        SendMessageClick:()=>{dispatch(sendMessageCreator());}
 
     }
 }
-const SuperDiaglogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
-            export default DialogsContainer;
+export default compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    withAuthRedirect
+)(Dialogs);

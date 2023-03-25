@@ -1,0 +1,12 @@
+.userPhoto {
+    width: 100px;
+    height: 100px;
+}
+
+button{
+    background-image: url("https://developer.mozilla.org/en-US/docs/Web/CSS/background-image");
+}
+
+.selectedPage{
+    font-size: 18px !important;
+}
